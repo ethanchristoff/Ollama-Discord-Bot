@@ -1,3 +1,5 @@
+![llamabanner](https://github.com/user-attachments/assets/3d5cfb76-ee25-48e2-a78f-46c59e7e0e88)
+
 # Ollama-Disocrd-Bot
 
 > This is a simple LLM based bot that utilizes chat based models (provided by Ollama). Users may speak with the bot to ask what every they want,

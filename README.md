@@ -1,6 +1,6 @@
 ![llamabanner](https://github.com/user-attachments/assets/3d5cfb76-ee25-48e2-a78f-46c59e7e0e88)
 
-# Ollama-Disocrd-Bot
+# Ollama-Discord-Bot
 
 > You can add the script to a bot you issued by changing the token (which is an environmental variable) in the config files.
 > Just ensure that you don't make the token public!

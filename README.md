@@ -3,7 +3,7 @@
 # Ollama-Disocrd-Bot
 
 > You can add the script to a bot you issued by changing the token (which is an environmental variable) in the config files.
-> Just ensure that you don't make the token public
+> Just ensure that you don't make the token public!
 
 This is a simple LLM based bot that utilizes chat based models (provided by Ollama). Users may speak with the bot to ask what every they want,
 exclusive of hateful content that may otherwise offend certain persons To summarize, this bot is capable of regarding the use of any open

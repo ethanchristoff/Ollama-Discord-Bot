@@ -26,7 +26,7 @@ class OllamaContent {
         conn.setDoOutput(true);  // Corrected from setOutput to setDoOutput
 
         // Constructing the JSON input
-        String modelName = "ollama3.1";
+        String modelName = "llama3.1";// Fit the model you wish to use here.
         String jsonInputString = String.format(
                 "{\"model\":\"%s\",\"prompt\":\"%s\",\"stream\": false}", modelName, prompt
         );
@@ -50,6 +50,9 @@ class OllamaContent {
 
         // Parsing the JSON response
         JSONObject jsonResponse = new JSONObject(response.toString());
+
+        // Closes the connection
+        conn.disconnect();
         return jsonResponse.getString("response");
     }
 }

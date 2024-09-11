@@ -1,5 +1,6 @@
 package events;
 
+import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
@@ -19,18 +20,32 @@ public class interactionEventListener extends ListenerAdapter {
 
         switch (slashName) {
             case "hello-llama":
-                output_msg_private("Allo stupid");
+                User username = event.getUser();
+                OllamaContent olc_hello = new OllamaContent(username+"says hello!");
+                try {
+                    // Defer the reply to acknowledge the command, allowing time for processing
+                    event.deferReply(true).queue();
+
+                    // Fetch the response from the Ollama API
+                    String response = olc_hello.sendRequest();
+
+                    // Edit the original message with the API response
+                    event.getHook().editOriginal(response).queue();
+                } catch (IOException e) {
+                    event.getHook().editOriginal("Failed to get a response from Ollama.").queue();
+                    e.printStackTrace();
+                }
                 break;
 
             case "ask-llama":
                 String prompt = Objects.requireNonNull(event.getOption("prompt")).getAsString();
-                OllamaContent olc = new OllamaContent(prompt);
+                OllamaContent olc_ask = new OllamaContent(prompt);
                 try {
                     // Defer the reply to acknowledge the command, allowing time for processing
-                    event.deferReply().queue();
+                    event.deferReply(true).queue();
 
                     // Fetch the response from the Ollama API
-                    String response = olc.sendRequest();
+                    String response = olc_ask.sendRequest();
 
                     // Edit the original message with the API response
                     event.getHook().editOriginal(response).queue();

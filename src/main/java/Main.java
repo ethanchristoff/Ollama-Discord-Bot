@@ -23,5 +23,9 @@ public class Main {
                 .addOption(OptionType.STRING,"prompt","drop in your questions",true)
                 .setGuildOnly(true)
                 .queue();
+        jda.upsertCommand("set-constraints", "Set limits to llama so that he doesn't say something offensive")
+                .addOption(OptionType.STRING,"constraint","Make an internal prompt",true)
+                .setGuildOnly(true)
+                .queue();
     }
 }

@@ -11,10 +11,15 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
 class OllamaContent {
-    private final String prompt;
+    private String prompt = " ";
+    private String constraints = "The following prompt is to be a constraint you must strictly follow: ";
 
-    public OllamaContent(String prompt) {
-        this.prompt = prompt;
+    public OllamaContent(String prompt, boolean constraint_state){
+        if (constraint_state){
+            constraints += prompt;
+        }else {
+            this.prompt = prompt;
+        }
     }
 
     public String sendRequest() throws IOException {
@@ -27,9 +32,17 @@ class OllamaContent {
 
         // Constructing the JSON input
         String modelName = "llama3.1";// Fit the model you wish to use here.
-        String jsonInputString = String.format(
-                "{\"model\":\"%s\",\"prompt\":\"%s\",\"stream\": false}", modelName, prompt
-        );
+        String jsonInputString = " ";
+        if (prompt == " "){
+            jsonInputString = String.format(
+                    "{\"model\":\"%s\",\"prompt\":\"%s\",\"stream\": false}", modelName, constraints
+            );
+        }else if (constraints == " "){
+            jsonInputString = String.format(
+                    "{\"model\":\"%s\",\"prompt\":\"%s\",\"stream\": false}", modelName, prompt
+            );
+        }
+
 
         // Sending the JSON request
         try (OutputStream os = conn.getOutputStream()) {

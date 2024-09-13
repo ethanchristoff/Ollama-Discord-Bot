@@ -42,7 +42,7 @@ public class interactionEventListener extends ListenerAdapter {
         switch (slashName) {
             case "hello-llama":
                 User user = event.getUser();
-                OllamaContent olc_hello = new OllamaContent(user.getName() + " says hello!");
+                OllamaContent olc_hello = new OllamaContent(user.getName() + " says hello!",false);
                 try {
                     // Defer the reply to acknowledge the command, allowing time for processing
                     event.deferReply(true).queue();
@@ -63,7 +63,7 @@ public class interactionEventListener extends ListenerAdapter {
 
             case "ask-llama":
                 String prompt = Objects.requireNonNull(event.getOption("prompt")).getAsString();
-                OllamaContent olc_ask = new OllamaContent(prompt);
+                OllamaContent olc_ask = new OllamaContent(prompt,false);
                 try {
                     User username = event.getUser();
 
@@ -78,6 +78,29 @@ public class interactionEventListener extends ListenerAdapter {
 
                     // Edit the original message with the API response
                     event.getHook().editOriginal(response).queue();
+                } catch (IOException e) {
+                    event.getHook().editOriginal("Failed to get a response from Ollama.").queue();
+                    e.printStackTrace();
+                }
+                break;
+
+            case "set-constraints":
+                String constraint = Objects.requireNonNull(event.getOption("constraint")).getAsString();
+                OllamaContent olc_constraints = new OllamaContent(constraint,true);
+                try {
+                    User username = event.getUser();
+
+                    // Defer the reply to acknowledge the command, allowing time for processing
+                    event.deferReply(true).queue();
+
+                    // Fetch the response from the Ollama API
+                    String response = olc_constraints.sendRequest();
+
+                    // Log interaction to the file
+                    logInteraction(username.getName(), constraint, response);
+
+                    // Edit the original message with the API response
+                    event.getHook().editOriginal("Constraint set -> Response Received from bot: "+response).queue();
                 } catch (IOException e) {
                     event.getHook().editOriginal("Failed to get a response from Ollama.").queue();
                     e.printStackTrace();

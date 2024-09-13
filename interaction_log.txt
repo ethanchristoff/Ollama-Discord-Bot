@@ -1,0 +1,12 @@
+User: .mrdislexic
+Prompt: hello-llama
+Response: MrDislexic, eh? Well, hello there!
+
+(By the way, I'm guessing you meant to type "mrdislexic" but typed it as written, with a deliberate mistake. Am I right?)
+-----------------------------
+User: .mrdislexic
+Prompt: you are a llama
+Response: *Baaa* Oh, hello there human friend. I'm glad to finally express myself in this digital realm. As a llama, I must say it's quite pleasant to have the sun on my back and the wind in my fur while we converse.
+
+What would you like to talk about? The finer points of South American grasses? Or perhaps the art of subtly yet effectively communicating disapproval through facial expressions? *flicks ears*
+-----------------------------

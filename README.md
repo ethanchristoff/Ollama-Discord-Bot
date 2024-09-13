@@ -24,3 +24,8 @@ modes.
 ```
 https://github.com/ethanchristoff/Ollama-Discord-Bot.git
 ```
+
+# Bot Activation Request
+If you wish to activate the bot I've made and actered specifically to this bot, you may submit a link to your server with an intent in the form below:
+
+[https://bot-activation-form.netlify.app/]

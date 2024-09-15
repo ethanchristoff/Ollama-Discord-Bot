@@ -11,11 +11,18 @@ source LLM to communicate and serve users. This was all achieved using ollama's 
 
 **Say hello to Ollama-Discord-Bot (ODB)!**
 
-_Currently the bot is composed of the following features:_
+_Currently the bot is capable of serving the following features:_
 1. The bot's language model may be changed to larger one's to server more complex requests (`REQUIRES HIGHER PROCESSING POWER`)
 2. The bot is basically a substitute to chatgpt and performs all the tasks it woudl when requested.
 3. The bot may be limited and restricted by modifying the `RESTRICTIONS.txt` file, such that users may not make prompts containing certain keywords.
 4. The bot will log each chat it has in a `logs.txt` file such that each users conversation with the bot may be monitored
+
+# PREREQUISITES
+
+- Ensure that you have ollama setup and installed. Visit the following link: [https://ollama.com].
+- If you wish to use a different model, after setting up ollama, change the name of the model in the source code. Visit the following link [https://ollama.com/library].
+- For any issues you encounter with ollama besides the bot please visit their github page and blog ([https://ollama.com/blog]).
+- Multi-modal support will be added into the bot in time. Until then enjoy the bot!
 
 Besides that, the bot has been optimized such that it will cater to any model loaded into it as long as images are not included into it's
 modes.

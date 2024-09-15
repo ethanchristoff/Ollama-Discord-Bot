@@ -13,7 +13,7 @@ source LLM to communicate and serve users. This was all achieved using ollama's 
 
 _Currently the bot is capable of serving the following features:_
 1. The bot's language model may be changed to larger one's to server more complex requests (`REQUIRES HIGHER PROCESSING POWER`)
-2. The bot is basically a substitute to chatgpt and performs all the tasks it woudl when requested.
+2. The bot is basically a substitute to chatgpt and performs all the tasks it would when requested.
 3. The bot may be limited and restricted by modifying the `RESTRICTIONS.txt` file, such that users may not make prompts containing certain keywords.
 4. The bot will log each chat it has in a `logs.txt` file such that each users conversation with the bot may be monitored
 

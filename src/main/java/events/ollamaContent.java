@@ -54,6 +54,10 @@ class OllamaContent {
         int code = conn.getResponseCode();
         System.out.println("Response code: " + code);
 
+        if (code == 400){
+            System.out.println("There was an issue connecting to 'http://localhost:11434/api/generate'");
+        }
+
         BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8));
         StringBuilder response = new StringBuilder();
         String line;

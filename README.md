@@ -2,6 +2,7 @@
 
 # Ollama-Discord-Bot
 
+> [!important]
 > You can add the script to a bot you issued by changing the token (which is an environmental variable) in the config files.
 > Just ensure that you don't make the token public!
 

@@ -10,7 +10,7 @@ This is a simple LLM based bot that utilizes chat based models (provided by Olla
 exclusive of hateful content that may otherwise offend certain persons To summarize, this bot is capable of regarding the use of any open
 source LLM to communicate and serve users. This was all achieved using ollama's API and language models.
 
-**Say hello to Ollama-Discord-Bot (ODB)!**
+# Say hello to Ollama-Discord-Bot (ODB)!
 
 _Currently the bot is capable of serving the following features:_
 1. The bot's language model may be changed to larger one's to server more complex requests (`REQUIRES HIGHER PROCESSING POWER`)
@@ -20,9 +20,9 @@ _Currently the bot is capable of serving the following features:_
 
 # PREREQUISITES
 
-- Ensure that you have ollama setup and installed. Visit the following link: [https://ollama.com].
-- If you wish to use a different model, after setting up ollama, change the name of the model in the source code. Visit the following link [https://ollama.com/library].
-- For any issues you encounter with ollama besides the bot please visit their github page and blog ([https://ollama.com/blog]).
+- Ensure that you have ollama setup and installed. Visit the following link: [ollama.com](https://ollama.com).
+- If you wish to use a different model, after setting up ollama, change the name of the model in the source code. Visit the following link [ollama.com/library](https://ollama.com/library).
+- For any issues you encounter with ollama besides the bot please visit their github page and blog ([ollama.com/blog](https://ollama.com/blog)).
 - Multi-modal support will be added into the bot in time. Until then enjoy the bot!
 
 Besides that, the bot has been optimized such that it will cater to any model loaded into it as long as images are not included into it's

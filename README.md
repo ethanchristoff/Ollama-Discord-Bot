@@ -43,6 +43,6 @@ https://github.com/ethanchristoff/Ollama-Discord-Bot.git
 ```
 
 # Bot Activation Request
-If you wish to activate the bot I've made and actered specifically to this bot, you may submit a link to your server with an intent in the form below:
+If you wish to add a bot that already has the required services loaded into it, contact me and I'll provide you with a bot that can be added into your server, simply fill the form below:
 
-[https://bot-activation-form.netlify.app/]
+[Form To Request for a Bot](https://bot-activation-form.netlify.app/)
